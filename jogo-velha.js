@@ -31,6 +31,7 @@ function validaJogadas(posicaoLinha,posicaoColuna){
     if (posicao[posicaoLinha-1], [posicaoColuna-1]){
         desenharSimbolo(jogador, posicaoLinha, posicaoColuna);
     }
+    verificaVencedor();
     jogadas++
     checaJogador();
     marcarJogadorAtivo(jogador);
@@ -49,6 +50,7 @@ function verificaVencedor(){
     horizontal();
     vertical();
     diagonal();
+    empate();
 }
 
 function horizontal() {
@@ -73,4 +75,16 @@ function diagonal() {
         posicao[0][2]==jogador && posicao[1][1]==jogador && posicao[2][0]==jogador) {
             exibirResultado(jogador)
         }
+}
+
+function empate(){
+    let jogoCompleto=0;
+    for (let linha=0;linha<3;linha++){
+        if (posicao[linha][coluna] != ''){
+            jogoCompleto++;
+        }
+        if (jogoCompleto==9){
+            jogo=false;
+        }
+    }
 }
