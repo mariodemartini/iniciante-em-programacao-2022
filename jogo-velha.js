@@ -29,7 +29,7 @@ function selecionarArea(posicaoLinha, posicaoColuna) {
     }
     jogadas++
     checaJogador();
-    
+        
 }
 
 
