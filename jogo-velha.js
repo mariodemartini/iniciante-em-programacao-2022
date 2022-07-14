@@ -31,3 +31,5 @@ function selecionarArea(posicaoLinha, posicaoColuna) {
     checaJogador();
     
 }
+
+
