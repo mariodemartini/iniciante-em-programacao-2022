@@ -8,7 +8,7 @@ let posicao=[ ["","",""],
               ["","",""]   
             ]
 
-function checaJogadas(){
+function checaJogador(){
     if (jogadas%2<0){
         jogador=X;
     } else {
@@ -16,13 +16,10 @@ function checaJogadas(){
     }
 }
 
-
-
 function reiniciarJogo() {
-    
+    window.location.reload();
 }
 
 function selecionarArea(posicaoLinha, posicaoColuna) {
-
-
+    
 }
