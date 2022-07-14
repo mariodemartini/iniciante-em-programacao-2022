@@ -33,6 +33,7 @@ function validaJogadas(posicaoLinha,posicaoColuna){
     }
     jogadas++
     checaJogador();
+    marcarJogadorAtivo(jogador);
 }
 
 function reiniciarJogo() {
