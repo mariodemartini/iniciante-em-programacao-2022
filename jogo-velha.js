@@ -41,8 +41,14 @@ function reiniciarJogo() {
 
 function selecionarArea(posicaoLinha, posicaoColuna) {
     validaJogadas(posicaoLinha,posicaoColuna);
+    verificaVencedor();
 }
 
+function verificaVencedor(){
+    horizontal();
+    vertical();
+    diagonal();
+}
 
 function horizontal() {
     if (posicao[0][0]==jogador && posicao[0][1]==jogador && posicao[0][2]==jogador ||
@@ -59,10 +65,11 @@ function vertical() {
         posicao[0][2]==jogador && posicao[1][2]==jogador && posicao[2][2]==jogador) {
             exibirResultado(jogador)
         }
-    //for (let coluna = 0; coluna < 3; coluna++) {
-      //  if (posicao[0][coluna] == posicao[linha][1] && tabelaJogadas[linha][1] == posicao[linha][2] && posicao[linha][1] != '') {
-        //    exibirResultado("O vencedor é " + jogador);
-          //  jogo = false;
-        //}
-    //}
+}
+
+function diagonal() {
+    if (posicao[0][0]==jogador && posicao[1][1]==jogador && posicao[2][2]==jogador ||
+        posicao[0][2]==jogador && posicao[1][1]==jogador && posicao[2][0]==jogador) {
+            exibirResultado(jogador)
+        }
 }
