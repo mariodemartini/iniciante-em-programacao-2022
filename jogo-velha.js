@@ -31,7 +31,6 @@ function validaJogadas(posicaoLinha,posicaoColuna){
     if (posicao[posicaoLinha-1], [posicaoColuna-1]){
         desenharSimbolo(jogador, posicaoLinha, posicaoColuna);
     }
-    verificaVencedor();
     jogadas++
     checaJogador();
     marcarJogadorAtivo(jogador);
